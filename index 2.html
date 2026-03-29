@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starbus</title>
+
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Starbus">
+<meta name="theme-color" content="#ff6a00">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+  :root{--orange:#ff6a00;--orange-dark:#cc5500;--orange-light:#fff3ec;--orange-mid:#ffb380;--bg:#f6f5f3;--surface:#fff;--border:#e5e3df;--text:#111;--muted:#888;--green:#1a7a4a;--green-bg:#eaf7f0;--red:#c0392b;--red-bg:#fdf0ef;--amber:#b45309;--amber-bg:#fffbeb;--blue:#1e4fa3;--blue-bg:#eef3fd;--purple:#6d28d9;--purple-bg:#f5f3ff;--radius:12px;--radius-sm:8px;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Inter',system-ui,sans-serif;}
+  .login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem;}
+  .login-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:2.5rem 2rem;width:100%;max-width:380px;}
+  .logo-mark{width:52px;height:52px;background:var(--orange);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;}
+  .logo-mark svg{width:28px;height:28px;fill:white;}
+  .login-title{font-size:26px;font-weight:700;margin-bottom:4px;}
+  .login-sub{color:var(--muted);font-size:14px;margin-bottom:2rem;}
+  label{font-size:13px;font-weight:500;display:block;margin-bottom:5px;color:var(--muted);}
+  input[type=text],input[type=password],input[type=tel],input[type=number],select,textarea{width:100%;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 13px;font-size:14px;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);outline:none;transition:border-color .15s;margin-bottom:1rem;}
+  input:focus,select:focus,textarea:focus{border-color:var(--orange);background:var(--surface);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:11px 20px;border-radius:var(--radius-sm);font-family:'Inter',system-ui,sans-serif;font-size:14px;font-weight:600;border:none;cursor:pointer;transition:all .15s;}
+  .btn-primary{background:var(--orange);color:white;}.btn-primary:hover{background:var(--orange-dark);}
+  .btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border);}.btn-secondary:hover{background:var(--bg);}
+  .btn-danger{background:var(--red-bg);color:var(--red);border:1px solid #f5c6c2;}
+  .btn-pdf{background:var(--blue-bg);color:var(--blue);border:1px solid #b5d4f4;}.btn-pdf:hover{background:#dce8fa;}
+  .btn-green{background:var(--green-bg);color:var(--green);border:1px solid #a7e3c3;}
+  .btn-amber{background:var(--amber-bg);color:var(--amber);border:1px solid #fcd34d;}
+  .btn-sm{padding:7px 13px;font-size:13px;}.btn-full{width:100%;}
+  .role-select{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1.5rem;}
+  .role-opt{border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:10px 8px;text-align:center;cursor:pointer;transition:all .15s;font-size:13px;font-weight:500;}
+  .role-opt:hover{border-color:var(--orange);}.role-opt.active{border-color:var(--orange);background:var(--orange-light);color:var(--orange-dark);}
+  .role-icon{font-size:20px;display:block;margin-bottom:4px;}
+  .app{display:none;min-height:100vh;flex-direction:column;}.app.visible{display:flex;}
+  .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 1.5rem;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+  .topbar-logo{font-family:'Inter',system-ui,sans-serif;font-weight:800;font-size:20px;color:var(--orange);}
+  .topbar-role{background:var(--orange-light);color:var(--orange-dark);border-radius:20px;padding:3px 10px;font-size:12px;font-weight:500;}
+  .topbar-cursainfo{background:var(--green-bg);color:var(--green);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:600;font-family:'Inter',system-ui,sans-serif;}
+  .topbar-left{display:flex;align-items:center;gap:10px;}.topbar-right{display:flex;align-items:center;gap:10px;}
+  .topbar-user{font-size:13px;color:var(--muted);}
+  .logout-btn{font-size:13px;color:var(--muted);background:none;border:1px solid var(--border);border-radius:var(--radius-sm);padding:6px 12px;cursor:pointer;font-family:'Inter',system-ui,sans-serif;}
+  .logout-btn:hover{color:var(--red);border-color:var(--red);}
+  .nav{background:var(--surface);border-bottom:1px solid var(--border);display:flex;padding:0 1rem;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .nav-item{padding:10px 14px;font-size:13px;font-weight:500;color:var(--muted);border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;transition:all .15s;font-family:'Inter',system-ui,sans-serif;background:none;border-top:none;border-left:none;border-right:none;}
+  .nav-item:hover{color:var(--text);}.nav-item.active{color:var(--orange);border-bottom-color:var(--orange);}.nav::-webkit-scrollbar{display:none;}
+  .main{flex:1;padding:1rem;max-width:1300px;margin:0 auto;width:100%;}
+  .page{display:none;}.page.active{display:block;}
+  .page-header{margin-bottom:1.5rem;}.page-title{font-size:18px;font-weight:600;}.page-sub{font-size:14px;color:var(--muted);margin-top:2px;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin-bottom:.875rem;}
+  .card-title{font-family:'Inter',system-ui,sans-serif;font-weight:600;font-size:13px;margin-bottom:.875rem;}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-bottom:1rem;}
+  .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem;}
+  .stat-val{font-family:'Inter',system-ui,sans-serif;font-size:26px;font-weight:700;color:var(--orange);}
+  .stat-lbl{font-size:12px;color:var(--muted);margin-top:2px;}
+  .badge{display:inline-block;font-size:11px;font-weight:500;padding:3px 9px;border-radius:20px;}
+  .badge-green{background:var(--green-bg);color:var(--green);}.badge-red{background:var(--red-bg);color:var(--red);}
+  .badge-amber{background:var(--amber-bg);color:var(--amber);}.badge-blue{background:var(--blue-bg);color:var(--blue);}
+  .badge-orange{background:var(--orange-light);color:var(--orange-dark);}.badge-gray{background:#f0ece6;color:var(--muted);}
+  .badge-purple{background:var(--purple-bg);color:var(--purple);}
+  .table-wrap{overflow-x:auto;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{text-align:left;padding:9px 10px;font-size:11px;font-weight:500;color:var(--muted);border-bottom:1px solid var(--border);font-family:'Inter',system-ui,sans-serif;white-space:nowrap;}
+  td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:middle;}
+  tr:last-child td{border-bottom:none;}tr:hover td{background:var(--bg);}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}.form-group{margin-bottom:0;}
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;align-items:flex-end;justify-content:center;padding:0;}
+  .modal-overlay.open{display:flex;}
+  .modal{background:var(--surface);border-radius:16px 16px 0 0;padding:1.5rem 1.25rem;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;}
+  .modal-title{font-family:'Inter',system-ui,sans-serif;font-weight:800;font-size:18px;margin-bottom:1.5rem;}
+  .modal-actions{display:flex;gap:10px;margin-top:1.5rem;flex-wrap:wrap;}
+  .seat-map{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;max-width:340px;}
+  .seat{aspect-ratio:1;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;cursor:pointer;border:1.5px solid transparent;transition:all .1s;font-family:'Inter',system-ui,sans-serif;}
+  .seat.free{background:var(--bg);border-color:var(--border);color:var(--muted);}.seat.free:hover{border-color:var(--orange);color:var(--orange);}
+  .seat.taken{background:var(--orange-light);border-color:var(--orange-mid);color:var(--orange-dark);cursor:default;}
+  .seat.selected{background:var(--orange);border-color:var(--orange-dark);color:white;}
+  .pax-list{display:flex;flex-direction:column;}
+  .pax-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);}
+  .pax-row:last-child{border-bottom:none;}
+  .pax-num{width:26px;height:26px;border-radius:50%;background:var(--orange-light);color:var(--orange-dark);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Inter',system-ui,sans-serif;}
+  .divider{height:1px;background:var(--border);margin:1rem 0;}
+  .search-bar{display:flex;gap:8px;margin-bottom:1rem;flex-wrap:wrap;}
+  .search-bar input,.search-bar select{margin-bottom:0;}.search-bar input{flex:1;min-width:130px;}.search-bar select{width:auto;}
+  .empty-state{text-align:center;padding:3rem 1rem;color:var(--muted);font-size:14px;}
+  .empty-icon{font-size:40px;margin-bottom:1rem;}
+  .stops-timeline{display:flex;flex-direction:column;}
+  .stop-item{display:flex;gap:12px;}.stop-left{display:flex;flex-direction:column;align-items:center;width:32px;flex-shrink:0;}
+  .stop-dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--orange);background:var(--surface);flex-shrink:0;}
+  .stop-dot.filled{background:var(--orange);}
+  .stop-line{width:2px;flex:1;background:var(--border);margin:2px 0;}
+  .stop-content{flex:1;padding-bottom:16px;}
+  .stop-pax-item{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:6px 10px;font-size:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;}
+  .mb-sofer-hero{background:var(--orange);border-radius:20px;padding:1.75rem;color:white;margin-bottom:1rem;}
+  .mb-sofer-hero-title{font-family:'Inter',system-ui,sans-serif;font-weight:800;font-size:24px;margin-bottom:4px;}
+  .mb-sofer-hero-sub{font-size:14px;opacity:.85;margin-bottom:1rem;}
+  .mb-sofer-ruta{background:rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:10px 14px;font-size:14px;font-weight:500;}
+  .mb-card{border:2px solid var(--orange);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:12px;background:var(--surface);}
+  .mb-card.archived{border-color:var(--border);opacity:.7;}
+  .mb-card.full{border-color:var(--red);}
+  .mb-card.warn{border-color:var(--amber);}
+  .mb-header{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .mb-name{font-family:'Inter',system-ui,sans-serif;font-weight:800;font-size:16px;}
+  .mb-dest{font-size:13px;color:var(--muted);margin-top:2px;}
+  .sofer-chip{background:var(--orange-light);color:var(--orange-dark);border-radius:var(--radius-sm);padding:4px 10px;font-size:12px;font-weight:600;font-family:'Inter',system-ui,sans-serif;}
+  .cap-bar{height:6px;border-radius:3px;background:var(--border);overflow:hidden;margin-top:6px;}
+  .cap-fill{height:100%;border-radius:3px;transition:width .3s;}
+  .alert{padding:10px 14px;border-radius:var(--radius-sm);font-size:13px;margin-bottom:1rem;border:1px solid;}
+  .alert-blue{background:var(--blue-bg);color:var(--blue);border-color:#b5d4f4;}
+  .alert-red{background:var(--red-bg);color:var(--red);border-color:#f5c6c2;}
+  .alert-amber{background:var(--amber-bg);color:var(--amber);border-color:#fcd34d;}
+  .alert-green{background:var(--green-bg);color:var(--green);border-color:#a7e3c3;}
+  .nota-chip{background:var(--purple-bg);color:var(--purple);border-radius:20px;padding:2px 8px;font-size:11px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:inline-block;}
+  .cursa-tag{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:600;font-family:'Inter',system-ui,sans-serif;}
+  .cursa-activa{background:var(--green-bg);color:var(--green);}
+  .cursa-arhivata{background:#f0ece6;color:var(--muted);}
+  .readonly-overlay{pointer-events:none;opacity:.6;}
+  @media(max-width:600px){.form-row{grid-template-columns:1fr;}.main{padding:1rem;}.topbar{padding:0 1rem;}.nav{padding:0 1rem;}.seat-map{grid-template-columns:repeat(6,1fr);}}
+
+  /* MOBILE LAYOUT FIXES */
+  html,body{height:100%;overflow-x:hidden;}
+  .app{max-width:100vw;}
+  .topbar{padding:0 .75rem;height:52px;gap:6px;}
+  .topbar-left{gap:6px;min-width:0;flex:1;}
+  .topbar-right{flex-shrink:0;gap:6px;}
+  .topbar-logo img{width:26px;height:26px;}
+  .topbar-logo span,.topbar-logo-text{font-size:16px;}
+  .topbar-role{display:none;}
+  .topbar-user{display:none;}
+  .topbar-cursainfo{font-size:10px;padding:2px 7px;white-space:nowrap;}
+  .logout-btn{padding:4px 8px;font-size:11px;}
+  .nav{padding:0 .75rem;}
+  .nav-item{padding:9px 10px;font-size:12px;}
+  .main{padding:.75rem;}
+  .page-header{margin-bottom:.875rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .page-header > div .page-title{font-size:17px;}
+  .card{padding:.875rem;margin-bottom:.75rem;border-radius:12px;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:.875rem;}
+  .stat-card{padding:.75rem;border-radius:10px;}
+  .stat-val{font-size:20px;}
+  .stat-lbl{font-size:11px;}
+  .search-bar{gap:6px;margin-bottom:.75rem;}
+  .search-bar input,.search-bar select{font-size:13px;padding:8px 10px;border-radius:8px;}
+  .btn{padding:9px 14px;font-size:13px;border-radius:8px;}
+  .btn-sm{padding:7px 12px;font-size:12px;}
+  .modal{padding:1.25rem 1rem;border-radius:14px 14px 0 0;}
+  .modal-title{font-size:15px;margin-bottom:1rem;}
+  input[type=text],input[type=password],input[type=tel],input[type=number],select,textarea{
+    padding:9px 11px;font-size:14px;margin-bottom:.75rem;border-radius:8px;
+  }
+  label{font-size:11px;margin-bottom:3px;}
+  .mb-sofer-hero{padding:1.1rem;border-radius:12px;}
+  .mb-sofer-hero-title{font-size:18px;}
+  .mb-sofer-hero-sub{font-size:12px;margin-bottom:.75rem;}
+  .mb-card{padding:.875rem;margin-bottom:8px;}
+  .mb-name{font-size:13px;}.mb-dest{font-size:11px;}
+  .sofer-chip{font-size:10px;padding:2px 7px;}
+  .badge{font-size:10px;padding:2px 7px;}
+  table{font-size:12px;}
+  th{padding:7px 8px;font-size:10px;}
+  td{padding:8px 8px;}
+  .pax-row{padding:7px 0;gap:7px;}
+  .pax-num{width:22px;height:22px;font-size:10px;}
+  .alert{padding:8px 10px;font-size:12px;}
+  .stop-pax-item{font-size:11px;padding:5px 7px;}
+  .form-row{gap:8px;}
+  .modal-actions{gap:7px;}
+  /* Cursa card compact */
+  #curseList .card > div:first-child{flex-direction:column;align-items:flex-start;gap:6px;}
+  #curseList .card > div:first-child > div:last-child{width:100%;display:flex;gap:6px;flex-wrap:wrap;}
+  #curseList .card > div:last-child{margin-top:10px;gap:12px;}
+  /* Stats row in cursa */
+  #curseList .card > div:last-child > div > span:first-child{font-size:18px;}
+  /* MB hero stats */
+  #mbSoferContent .stats-grid{grid-template-columns:repeat(3,1fr);}
+
+</style>
+
+<script>
+const _manifest = {
+  "name": "Starbus",
+  "short_name": "Starbus", 
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6a00",
+  "icons": [{"src": "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAC0ALQDASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAYHBAUIAgED/8QAPxAAAQQBAgIGBAoKAwEAAAAAAAECAwQFBhEHIRITMVFhcRUiMqEUQUNygZGxwdHhCBYjNkJSZHOCwiYzYnT/xAAbAQEAAgMBAQAAAAAAAAAAAAAABQcCAwYEAf/EADIRAAEDAwIDBAkFAQAAAAAAAAEAAgMEBREhQQYxURJxocETFCJDYZHR4fA1QnKBsSP/2gAMAwEAAhEDEQA/AOywAEQABEAARAAEQABEAARAAEQABEAARAAEQABEAARAAEQABEAARAAEQA/K3MytVlsSu6LI2K9y9yIm58JAGSvoBJwFV3FPiBk8VmVxOEmZA6FEWaVWNevSX4kRyKhuuE2srOpK89TJKxbldEXptRG9Y1fj2Tlv5FIZ267I5m3eeqqs0rn8/FTecLct6J1nTlc7aKZepk8nfnsVjScRVDroHvefRuOMbAHQaK0avhunbaixjB6RoznGpI1Oq6PAQFnqrUAARAAEQABEAARAAEQABEAARAAEQABEIXxjy3ozR00TH9Ga25IW7Lz2+P3faTQozjtl1t6kixsb94qcfrIn87u33bEFxHWeqW95HN2g/v7ZU9w3Ret3BgI0b7R/r74VdHqN7o5Gvaqo5q7op5BTyuXmuoNGZRuY0zRvou7nxIj/AJycl95uCqeAGXV9W5hpHc4166JPBeS+/YtYuuz1nrlFHLvjXvGhVH3mj9SrZIds6dx1CAAk1GIAAiAAIgACIAAiAAIgACIAAiAAIvxvWY6lOa1KqIyJivcq9yJuctZu9JksvavSqqumlc/n3KvIvPjRlvR2j5K8b9pbjkiT5va45/K340rO3OynH7Rk95+3+qyuCaLsQPqTzccDuH3/AMQAHEruVJOG2V9Eawo2HO6MT39VJ813I6UTmm5yQxytcjmrsqLuinTehMqmY0rRu9Ld6xo2TwcnJSwOCazSSmP8h/h8lXnHFFgx1Q/if9Hmt4ADvlX6AAIgACIAAiAAIgACKL6z1tidMSMgs9ZNZenSSKPtRO9e4iz+MeOT2MTZd5vRCM8ccVdg1bJk3xvdUssYkb/iarWo1U92/wBJXxW134kuNPWSRMw0A4Gm3XXrzVmWfhm3VFHHM/LiRk679NOnJXBJxkh+Twz/APKVPwMaTjHY+Tw8X+UilUAiXcUXM+88B9FLt4WtY934n6qz38Y8qvsYmonm9ymPJxezrvZpU2/QqlcA0u4iubvfHw+i2t4ctjeUI8fqtzqnUmU1HbbPkpkckaKkbGps1qeCGmMjHUrWQuR1KcL5ppF2axqbqpMr3C3U9euyWNkFhVbu5jH82r3c+08rKWtry6ZrS/qea9b6qit4bC5zWdByUFBn5HD5XHSKy7QsQKn8zF2MA8T2OYey4YK9zJGyDtMOR8EJHpPWWZ02x8NGVroHr0likTdN+9O4jgNkFRLTvEkTi09QtdRTxVDDHK0OB2KsiPi9nG+1Rpu+tPvP3Zxjyie3iKi+T3FYAk28RXMe+Ph9FFO4cth9yPH6q14+Mdj5TDxfRIpkx8ZIvlMM/wCiX8inwbm8T3Me88B9Fqdwtaz7vxP1Vzs4x45fbxFlPJ6KTfSOpcdqag61Qc5FYvRkjfycxTmEuPgHib1aG7kp43R150ayJHcult2r5E9YOIK+srGwy+005zpy+Oi5/iHh630dE6aL2XDGNc5+GqtUAFgqvEAARAAEWLlMfTydKSnegZNBImzmuQofiJoO5p2Z1umj7GNcvJ6Ju6Pwd+J0EeJ4op4XQzRtkjemzmuTdFQh7vZYLnHh2jhyP5zCmbPe57ZJlmrTzH5yK5KBafEnhs6okmVwESvgT1payc1Z4t708CrVRUXZU2VCp7hbp6CX0Uw7jse5W3b7lBcIvSwnvG4718M3B42zmMrXxtREWad3RbuuyJ4mEfrUsT1LLLNaV8U0a7se1dlRTyRlgeC/lv3L2SB5YQznjTvXRmhdHY/TFNOrRJrj0/azuTn5J3ISc59xXE7VFNyddYitsT+GVifamxMcPxfoS7NyePlgX+eJekn1FoW3iK1NjEUf/MDYjzGVVdz4cuzpDNJ/0J3B8jjwVmzwwzxrHNEyRi9rXJuikczGg9MZNHLLjY4ZF/jh9RU+rkbDT+pcLnd0xt6OZ7U3czscieSm3OgdHS1seSGvae4rn2yVVDJgFzHDvC5z4m6Yr6YzUdapM+WCaPpt6ftN57beJEyy/wBID94KP/z/AHqVoVBe4I6evljjGGg6BXFY55KigikkOXEalAARalUPqIqrsibqp7rwy2JmQwxukkeuzWtTdVUufhvw3hoNiymdjbLb5OjgXm2PxXvUk7XaZ7lL2Ihpudh+dFF3S7U9ti7cp12G5/Oq03DThw+0seWz0Ssg5OirL2v8XeHgXJFGyKNscbGsY1NmtamyIh6RNk2QFs2y1wW6L0cQ13O5VR3S6z3KX0kp02GwQAEkoxAAEQABEAARFTdNlKz4lcOY8ikmVwcbY7fN0kCcmyeKdylmA8Vfb4K+IxTDI8R8QvdQXCeglEsJwfA/ArkqeKWCZ8M0bo5GLs5rk2VFPBdXG7TNF+HfqCCNsVuJzUlVPlEVdufiUqVBdrY+21Bhcc7g9QritFzZcqYTNGNiOhQAEapNTrggq/ruzmv/AEv+wv4oHgh+/Ef9l/2F/Fp8G/p5/kfJVTxn+oj+I81SPH9f+RUk/pv9lK1LJ4/qn6yU0/pv9lK2OF4h/Upu/wAl3nDv6ZD3eaGVisfcyl6OlRgfNNIuzWtQxk5rsdF8M9NUcHgK88cbXW7MTXyzL2rum+yeAsdnddJyzOGjUn6L5fbw21wB+MuOgH1WNw70HT05C23bRljJOTm/bdI/Bv4k1ALcpKOGjiEUIwAqhrKyaslMszskoAD0ryoAAiAAIgACIAAiAAIq14+ZLqMBVxzHbOsy9Jyd7W/mqFIk+45ZH4Xq/wCCNduypEjNv/S81+4gJT3EtT6xcZDs3T5ffKuXhml9XtsY3dr8/thAAQSnlOuCH78R/wBl/wBhauvNZ4/TFRWuVJ7z0/ZwIvPzXuQ58xGSu4m8y9j53QTs3RHJ4n5Xrdm9bktW5nzTSLu57l3VTpbfxC6goDTwj2ySc7AHzXMXDhxtwuAqJj7AAGNyR5LK1Dmr+eyT7+Rl6yV3JERNkancidxrgDnZJHSOL3nJO66SONkTQxgwBsh0dwpyPpLRNF7ndKSFqwv82/lsc4lvfo+5HePIYty9itmYi/Uv3HS8I1PobgGHk8EefkuY4wpfTW8vHNhB8vNW0AC1lUyAAIgACIAAiAAIgACIfHuRrFcvYibqfTRa/wAh6M0hkbSO2ekKtZ5ryT7TVPKIYnSO5AE/JbYITNK2NvNxA+a541Zd9I6kyFxF3bLO5W+W/I1Z9VVVVVV3VT4UTLIZHl55k5V9xRiJjWN5AYQAkui9HZTU1lOoYsNRq/tLD09VPBO9TOnp5amQRxNy4rCoqYqaMySuw0KPQQTWJOrgifK9f4WN3U8yMfG9WParXIuyoqbKh0zpXSuI07USKlXasionTmem7nL5/cYGtNC4nUcTperbVu7erOxNt/nJ8Z1r+C6kU/bDwX9Pv1XIM42pnVHYcwhnXf5dFzmDcao05lNO3Vr5CBUaq+pK3mx6eCmnOQlhfC8skGCNiuxhmjmYJIzkHcIS/hFkfR+t6iOdsyxvC76ez37EQP3oWH1L0FqNdnxSNei+KLubaOoNNUMlH7SCtVbTipp3wn9wIXWIMbF2mXcdXtxru2aNr0XzTcyS82uDgHDdUO5paS08wgAMligACIAAiAAIgACIVnx+yPU4Onjmu9aeXpuTwan4qWYUdx8Wwup6ySNVIUrp1a9/NdznuKJzDbX43wPmV0XC0DZrnH2tsn5BVwemNc96MY1XOVdkRE5qZ2Cw+Qzd5tPHV3TSO7dk5NTvVfiQvHQXD7H6fYy3cRtvIbb9NU9WP5qfeV3abHUXJ/sDDdyeX9dSrHu99prYz2zl2zRz/voFD+H/AAxmt9XkNQNdFB7TK3Y5/wA7uQuKnWr06zK9WFkMTE2axqbIiH6gtK22mnt0fZiGu53Kqm53epuUnbmOmw2H51QAEmoxYeXxlHLUn079dk8L07HJ2eKdylJa/wCHN7CK+9jEfbodqoibvjTx708S+T45Ecio5EVF7UUiLrZaa5MxIMO2I5/cKYtN7qbY/MZy3cHl9iuSAXZxA4ZV7/WZDAtbBZXdz4Oxj18O5Smr1SzRtPq24XwzRrs5j02VCq7naKi3SdmUabHY/nRWva7xTXKPtRHXcbj86q/+DuR+H6JrMc7d9ZVhd9HZ7lQmRVP6Pa2PgeTRyL1HTYrVXs6Wy77e4tYtSwzunt0T3c8Y+WiqjiCBsFxlY3lnPz180ABLqHQABEAARAAEQABENbnsFic7XbBlaTLLGru3dVaqeSoqKbIGEkbJGljwCDsdVnHI+JwewkEbjQrX4PCYrCVlr4ulHWjVd12VVVfNVVVU2AAjjZG0NYMAbBJJHyOL3nJO51QAGawQABEAARDT57TGCzrmPyuOjsPZ2O6Tmu+tqopuAa5YY5m9iRoI6EZWyKaSF3bjcWnqDgrExONo4qm2nj6zK8DexjfxXmplgGTGNY0NaMALF73PcXOOSUABksUAARAAEQABEAARAAEQABEAARAAEQABEAARAAEQABEAARAAEX//2Q==", "sizes": "192x192", "type": "image/png"}]
+};
+const _blob = new Blob([JSON.stringify(_manifest)], {type:'application/manifest+json'});
+const _url = URL.createObjectURL(_blob);
+const _link = document.createElement('link');
+_link.rel = 'manifest'; _link.href = _url;
+document.head.appendChild(_link);
+</script>
+</head>
+<body>
+
+<div class="login-wrap" id="loginWrap">
+  <div class="login-card">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.5rem;"><img src="data:image/png;base64,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" style="width:40px;height:40px;border-radius:10px;"><span style="font-size:24px;font-weight:700;color:var(--orange);letter-spacing:-0.5px;">Starbus</span></div>
+    <p class="login-sub">Sistem de gestiune curse Moldova — Italia</p>
+    <label>Selectează rolul</label>
+    <div class="role-select">
+      <div class="role-opt active" onclick="selectRole('admin')" id="role-admin"><span class="role-icon">🔑</span>Admin</div>
+      <div class="role-opt" onclick="selectRole('sef')" id="role-sef"><span class="role-icon">👷</span>Șef cursă</div>
+      <div class="role-opt" onclick="selectRole('sofer')" id="role-sofer"><span class="role-icon">🚐</span>Șofer</div>
+    </div>
+    <label>Utilizator</label><input type="text" id="loginUser" placeholder="ex: admin" />
+    <label>Parolă</label><input type="password" id="loginPass" placeholder="••••••••" />
+    <p id="loginErr" style="color:var(--red);font-size:13px;margin-bottom:1rem;display:none;">Date incorecte.</p>
+    <button class="btn btn-primary btn-full" onclick="doLogin()">Intră în aplicație</button>
+    <div style="margin-top:1.25rem;padding:10px;background:var(--bg);border-radius:var(--radius-sm);font-size:12px;color:var(--muted);">
+      <strong style="color:var(--text);">Demo:</strong> admin/admin123 · sef/sef123 · sofer1/s1 · sofer2/s2 · sofer3/s3
+    </div>
+  </div>
+</div>
+
+<div class="app" id="app">
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-logo"><img src="data:image/png;base64,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" style="width:28px;height:28px;border-radius:6px;"><span style="font-size:17px;font-weight:700;color:var(--orange);letter-spacing:-0.3px;">Starbus</span></div>
+      <span class="topbar-role" id="topbarRole"></span>
+      <span class="topbar-cursainfo" id="topbarCursaInfo" style="display:none;"></span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-user" id="topbarUser"></span>
+      <button class="logout-btn" onclick="doLogout()">Ieșire</button>
+    </div>
+  </div>
+  <nav class="nav" id="mainNav"></nav>
+  <div class="main">
+
+    <!-- CURSE -->
+    <div class="page" id="page-curse">
+      <div class="page-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div><h2 class="page-title">Curse</h2><p class="page-sub">Chișinău — Italia</p></div>
+        <button class="btn btn-primary btn-sm" onclick="openModalCursa()">+ Cursă nouă</button>
+      </div>
+      <div id="curseList"></div>
+    </div>
+
+    <!-- PASAGERI -->
+    <div class="page" id="page-pasageri">
+      <div class="page-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div><h2 class="page-title">Pasageri</h2><p class="page-sub" id="pasageriSub"></p></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button class="btn btn-pdf btn-sm" onclick="exportPDF()">⬇ Export PDF</button>
+          <button class="btn btn-primary btn-sm" id="btnAddRez" onclick="openModalRezervare()">+ Rezervare nouă</button>
+        </div>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="searchPax" placeholder="Nume sau telefon..." oninput="renderPasageri()" />
+        <select id="filterCursa" onchange="renderPasageri()"><option value="">Toate cursele</option></select>
+        <select id="filterOprire" onchange="renderPasageri()"><option value="">Toate opririle</option></select>
+        <select id="filterPlata" onchange="renderPasageri()"><option value="">Toate plățile</option><option value="platit">Plătit</option><option value="avans">Avans</option><option value="neplatit">Neplătit</option></select>
+      </div>
+      <div class="stats-grid" id="finStats" style="margin-bottom:1rem;"></div>
+      <div class="card">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Loc</th><th>Nume</th><th>Telefon</th><th>Urcare</th><th>Destinație</th><th>Preț</th><th>Plată</th><th>Microbuz</th><th>Bagaje</th><th>Notă</th><th>Status</th><th></th></tr></thead>
+            <tbody id="pasageriBody"></tbody>
+          </table>
+        </div>
+        <div class="empty-state" id="emptyPax" style="display:none;"><div class="empty-icon">🎫</div>Nu există rezervări.</div>
+      </div>
+    </div>
+
+    <!-- OPRIRI -->
+    <div class="page" id="page-opriri">
+      <div class="page-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div><h2 class="page-title">Opriri intermediare</h2><p class="page-sub">Ordinea de urcare</p></div>
+        <button class="btn btn-pdf btn-sm" onclick="exportPDFOpriri()">⬇ Export PDF</button>
+      </div>
+      <div class="card" style="margin-bottom:1rem;">
+        <label>Selectează cursa</label>
+        <select id="opririCursa" onchange="renderOpriri()" style="max-width:320px;margin-bottom:0;"><option value="">— alege cursa —</option></select>
+      </div>
+      <div id="opririContent"></div>
+    </div>
+
+    <!-- MICROBUZ -->
+    <div class="page" id="page-microbuz">
+      <div class="page-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div><h2 class="page-title">Microbuzuri</h2><p class="page-sub" id="mbPageSub">Cursa activă</p></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <select id="mbFilterCursa" onchange="renderMicrobuzAdmin()" style="margin-bottom:0;width:auto;font-size:13px;padding:7px 12px;"></select>
+          <button class="btn btn-primary btn-sm" id="btnAddMb" onclick="openModalAddMb()">+ Microbuz nou</button>
+        </div>
+      </div>
+      <div id="mbAdminContent"></div>
+    </div>
+
+    <!-- MICROBUZ SOFER -->
+    <div class="page" id="page-microbuz-sofer">
+      <div class="page-header"><h2 class="page-title">Microbuzul meu</h2><p class="page-sub">Cursă curentă și pasageri</p></div>
+      <div id="mbSoferContent"></div>
+    </div>
+
+    <!-- BAZA DATE -->
+    <div class="page" id="page-baza">
+      <div class="page-header"><h2 class="page-title">Baza de date pasageri</h2><p class="page-sub">Toți pasagerii înregistrați</p></div>
+      <div class="search-bar"><input type="text" id="searchBaza" placeholder="Caută după nume sau telefon..." oninput="renderBaza()" /></div>
+      <div class="card">
+        <div class="table-wrap"><table>
+          <thead><tr><th>Nume</th><th>Telefon</th><th>Destinație frecventă</th><th>Total curse</th><th>Ultima cursă</th><th>Acțiuni</th></tr></thead>
+          <tbody id="bazaBody"></tbody>
+        </table></div>
+        <div class="empty-state" id="emptyBaza" style="display:none;"><div class="empty-icon">👥</div>Nu s-au găsit pasageri.</div>
+      </div>
+    </div>
+
+    <!-- RAPOARTE -->
+    <div class="page" id="page-rapoarte">
+      <div class="page-header"><h2 class="page-title">Rapoarte</h2><p class="page-sub">Statistici generale</p></div>
+      <div class="stats-grid" id="rapoarteStats"></div>
+      <div class="card" id="rapoarteDetalii"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL CURSA -->
+<div class="modal-overlay" id="modalCursa">
+  <div class="modal">
+    <h3 class="modal-title" id="modalCursaTitle">Cursă nouă</h3>
+    <div class="form-row">
+      <div class="form-group"><label>Data plecării</label><input type="text" id="cData" placeholder="04.04.2026" /></div>
+      <div class="form-group"><label>Ora plecării</label><input type="text" id="cOra" placeholder="18:00" /></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Număr locuri autocar</label><input type="number" id="cLocuri" value="54" min="1" max="80" /></div>
+      <div class="form-group"><label>Preț implicit bilet (€)</label><input type="number" id="cPretImplicit" value="150" min="0" /></div>
+    </div>
+    <label>Opriri intermediare (în ordine)</label>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:8px;" id="opririList"></div>
+    <button class="btn btn-secondary btn-sm" style="margin-bottom:1rem;" onclick="addOprireaLista()">+ Adaugă oprire</button>
+    <label>Observații</label><textarea id="cObs" rows="2" placeholder="Observații suplimentare..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveCursa()">Salvează</button>
+      <button class="btn btn-secondary" onclick="closeModal('modalCursa')">Anulează</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL REZERVARE -->
+<div class="modal-overlay" id="modalRezervare">
+  <div class="modal">
+    <h3 class="modal-title">Rezervare pasager</h3>
+    <label>Cursa</label>
+    <select id="rCursa" onchange="onCursaChange()"><option value="">— alege cursa —</option></select>
+    <label>Selectează loc</label>
+    <div class="seat-map" id="seatMapModal"></div>
+    <p style="font-size:12px;color:var(--muted);margin:6px 0 1rem;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--orange);border-radius:2px;margin-right:4px;"></span>Selectat &nbsp;
+      <span style="display:inline-block;width:10px;height:10px;background:var(--orange-light);border:1.5px solid var(--orange-mid);border-radius:2px;margin-right:4px;"></span>Ocupat
+    </p>
+    <div class="form-row">
+      <div class="form-group"><label>Nume și prenume</label><input type="text" id="rNume" placeholder="Ion Popescu" /></div>
+      <div class="form-group"><label>Telefon</label><input type="tel" id="rTel" placeholder="+373 69 000 000" /></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Oprire de urcare</label><select id="rUrcare"></select></div>
+      <div class="form-group"><label>Destinație Italia</label>
+        <select id="rDest"><option>Milano centro</option><option>Milano est</option><option>Torino</option><option>Bergamo</option><option>Brescia</option><option>Cremona</option><option>Pavia</option><option>Altă destinație</option></select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Preț bilet (€)</label><input type="number" id="rPret" placeholder="150" /></div>
+      <div class="form-group"><label>Status plată</label>
+        <select id="rPlata"><option value="neplatit">Neplătit</option><option value="avans">Avans</option><option value="platit">Plătit integral</option></select>
+      </div>
+    </div>
+    <label>Bagaje</label><input type="text" id="rBagaje" placeholder="ex: 2 colete, 30kg" />
+    <label>Notă internă</label><input type="text" id="rNota" placeholder="ex: plătește restul la Milano..." />
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveRezervare()">Salvează rezervarea</button>
+      <button class="btn btn-secondary" onclick="closeModal('modalRezervare')">Anulează</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL MICROBUZ -->
+<div class="modal-overlay" id="modalAddMb">
+  <div class="modal">
+    <h3 class="modal-title">Adaugă microbuz</h3>
+    <label>Numele microbuzului</label><input type="text" id="mbNewNume" placeholder="ex: Microbuz 1, Van Milano..." />
+    <label>Număr înmatriculare</label><input type="text" id="mbNewNr" placeholder="ex: B 123 ABC" />
+    <label>Destinații deservite</label>
+    <div id="mbDestCheck" style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:1rem;">
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);margin-bottom:0;cursor:pointer;"><input type="checkbox" value="Milano centro"> Milano centro</label>
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);margin-bottom:0;cursor:pointer;"><input type="checkbox" value="Milano est"> Milano est</label>
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);margin-bottom:0;cursor:pointer;"><input type="checkbox" value="Torino"> Torino</label>
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);margin-bottom:0;cursor:pointer;"><input type="checkbox" value="Bergamo"> Bergamo</label>
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);margin-bottom:0;cursor:pointer;"><input type="checkbox" value="Brescia"> Brescia</label>
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);margin-bottom:0;cursor:pointer;"><input type="checkbox" value="Cremona"> Cremona</label>
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);margin-bottom:0;cursor:pointer;"><input type="checkbox" value="Pavia"> Pavia</label>
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);margin-bottom:0;cursor:pointer;"><input type="checkbox" value="Altă destinație"> Altă destinație</label>
+    </div>
+    <label>Atribuie șofer</label>
+    <select id="mbNewSofer"><option value="">— alege șofer —</option><option value="sofer1">Ion Rusu (sofer1)</option><option value="sofer2">Petru Moraru (sofer2)</option><option value="sofer3">Vasile Dănilă (sofer3)</option></select>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveMicrobuz()">Salvează</button>
+      <button class="btn btn-secondary" onclick="closeModal('modalAddMb')">Anulează</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DETALII CURSA -->
+<div class="modal-overlay" id="modalDetaliiCursa">
+  <div class="modal" style="max-width:600px;">
+    <h3 class="modal-title" id="detaliiCursaTitle"></h3>
+    <div id="detaliiCursaContent"></div>
+    <div class="modal-actions"><button class="btn btn-secondary" onclick="closeModal('modalDetaliiCursa')">Închide</button></div>
+  </div>
+</div>
+
+<!-- MODAL NOTA -->
+<div class="modal-overlay" id="modalNota">
+  <div class="modal" style="max-width:400px;">
+    <h3 class="modal-title">Notă internă</h3>
+    <textarea id="notaText" rows="4" placeholder="ex: plătește restul la Milano, preferă loc fereastră..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveNota()">Salvează</button>
+      <button class="btn btn-secondary" onclick="closeModal('modalNota')">Anulează</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL SCHIMB SOFER -->
+<div class="modal-overlay" id="modalSchimbSofer">
+  <div class="modal" style="max-width:380px;">
+    <h3 class="modal-title" id="schimbSoferTitle">Schimbă șoferul</h3>
+    <label>Șofer nou</label>
+    <select id="schimbSoferSel">
+      <option value="sofer1">Ion Rusu (sofer1)</option>
+      <option value="sofer2">Petru Moraru (sofer2)</option>
+      <option value="sofer3">Vasile Dănilă (sofer3)</option>
+    </select>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveSchimbSofer()">Salvează</button>
+      <button class="btn btn-secondary" onclick="closeModal('modalSchimbSofer')">Anulează</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const USERS={admin:{pass:'admin123',rol:'admin',nume:'Administrator'},sef:{pass:'sef123',rol:'sef',nume:'Șef de cursă'},sofer1:{pass:'s1',rol:'sofer',nume:'Ion Rusu'},sofer2:{pass:'s2',rol:'sofer',nume:'Petru Moraru'},sofer3:{pass:'s3',rol:'sofer',nume:'Vasile Dănilă'}};
+const OPRIRI_DEFAULT=['Chișinău','Bălți','Iași','București'];
+const MB_CAP=12; // capacitate maxima microbuz
+
+let currentUser=null,selectedRole='admin',selectedSeat=null,editRezId=null,notaRezId=null,schimbSoferMbId=null;
+let opririEditorList=[...OPRIRI_DEFAULT];
+
+let curse=[
+  {id:1,data:'28.03.2026',ora:'18:00',locuri:54,pretImplicit:150,obs:'',opriri:['Chișinău','Bălți','Iași','București'],arhivata:true},
+  {id:2,data:'04.04.2026',ora:'18:00',locuri:54,pretImplicit:150,obs:'',opriri:['Chișinău','Bălți','Iași','București'],arhivata:false},
+  {id:3,data:'11.04.2026',ora:'18:00',locuri:54,pretImplicit:155,obs:'',opriri:['Chișinău','Cahul','Bălți','Iași','București'],arhivata:false},
+];
+
+let rezervari=[
+  {id:1,cursaId:1,loc:3,nume:'Maria Popescu',tel:'+373 69 111 111',urcare:'Chișinău',dest:'Milano centro',pret:150,plata:'platit',bagaje:'1 valiță 25kg',nota:'Loc fereastră',status:'urcat'},
+  {id:2,cursaId:1,loc:7,nume:'Ion Rusu',tel:'+373 69 222 222',urcare:'Bălți',dest:'Torino',pret:155,plata:'platit',bagaje:'2 colete',nota:'',status:'urcat'},
+  {id:3,cursaId:1,loc:12,nume:'Elena Munteanu',tel:'+373 69 333 333',urcare:'Chișinău',dest:'Bergamo',pret:150,plata:'avans',bagaje:'1 valiță 20kg',nota:'Plătește 30€ la sosire',status:'urcat'},
+  {id:4,cursaId:1,loc:18,nume:'Vasile Croitor',tel:'+373 69 444 444',urcare:'Iași',dest:'Milano est',pret:150,plata:'neplatit',bagaje:'3 colete 45kg',nota:'',status:'urcat'},
+  {id:5,cursaId:1,loc:22,nume:'Ana Botnaru',tel:'+373 69 555 555',urcare:'Chișinău',dest:'Brescia',pret:160,plata:'platit',bagaje:'1 valiță 18kg',nota:'',status:'urcat'},
+  {id:6,cursaId:1,loc:30,nume:'Petru Lazăr',tel:'+373 69 666 666',urcare:'Iași',dest:'Torino',pret:140,plata:'platit',bagaje:'',nota:'',status:'urcat'},
+  {id:7,cursaId:2,loc:5,nume:'Olga Vrabie',tel:'+373 69 777 777',urcare:'Chișinău',dest:'Milano centro',pret:150,plata:'avans',bagaje:'2 valize',nota:'',status:'rezervat'},
+  {id:8,cursaId:2,loc:11,nume:'Dumitru Cojocaru',tel:'+373 69 888 888',urcare:'Bălți',dest:'Bergamo',pret:155,plata:'neplatit',bagaje:'1 colet',nota:'',status:'rezervat'},
+  {id:9,cursaId:2,loc:19,nume:'Natalia Pavel',tel:'+373 69 999 999',urcare:'Chișinău',dest:'Brescia',pret:160,plata:'platit',bagaje:'1 valiță',nota:'Are copil 4 ani',status:'rezervat'},
+  {id:10,cursaId:3,loc:2,nume:'Andrei Grama',tel:'+373 69 100 100',urcare:'Bălți',dest:'Torino',pret:155,plata:'avans',bagaje:'2 colete 30kg',nota:'',status:'rezervat'},
+];
+
+// microbuzuri globale — persista intre curse, fiecare are cursaId alocat per cursa
+let microbuzuri=[
+  {id:1,nume:'Microbuz 1',nr:'B 123 ABC',destinatii:['Milano centro','Milano est'],soferUsername:'sofer1',cursaId:1},
+  {id:2,nume:'Microbuz 2',nr:'B 456 DEF',destinatii:['Torino','Bergamo'],soferUsername:'sofer2',cursaId:1},
+  {id:3,nume:'Microbuz 3',nr:'B 789 GHI',destinatii:['Brescia'],soferUsername:'sofer3',cursaId:1},
+  {id:4,nume:'Microbuz 1',nr:'B 123 ABC',destinatii:['Milano centro','Milano est'],soferUsername:'sofer1',cursaId:2},
+  {id:5,nume:'Microbuz 2',nr:'B 456 DEF',destinatii:['Torino','Bergamo'],soferUsername:'sofer2',cursaId:2},
+];
+
+let nextCursaId=4,nextRezId=11,nextMbId=6;
+
+// ===== HELPERS =====
+function cursaActiva(){return curse.filter(c=>!c.arhivata).sort((a,b)=>b.id-a.id)[0]||null;}
+function getCurseForRole(){
+  const rol=currentUser.rol;
+  if(rol==='admin')return curse;
+  if(rol==='sef')return curse.slice(-5);
+  if(rol==='sofer'){const mb=microbuzuri.find(m=>m.soferUsername===currentUser.username&&!curse.find(c=>c.id===m.cursaId)?.arhivata);if(!mb)return[];return curse.filter(c=>c.id===mb.cursaId);}
+  return[];
+}
+function getMbForRole(cursaId){
+  const rol=currentUser.rol;
+  if(rol==='admin')return microbuzuri.filter(m=>m.cursaId===cursaId);
+  if(rol==='sef'){const ids=getCurseForRole().map(c=>c.id);return microbuzuri.filter(m=>ids.includes(m.cursaId)&&m.cursaId===cursaId);}
+  return[];
+}
+function mbPaxCount(mb){return rezervari.filter(r=>r.cursaId===mb.cursaId&&mb.destinatii.includes(r.dest)).length;}
+function plataColor(p){return{platit:'#eaf7f0',avans:'#fffbeb',neplatit:'#fdf0ef'}[p]||'#f0ece6';}
+function plataTextColor(p){return{platit:'#1a7a4a',avans:'#b45309',neplatit:'#c0392b'}[p]||'#8a7d70';}
+function plataBadge(p){return{platit:'badge-green',avans:'badge-amber',neplatit:'badge-red'}[p]||'badge-gray';}
+function plataLabel(p){return{platit:'Plătit',avans:'Avans',neplatit:'Neplătit'}[p]||p;}
+function statusBadge(s){return{urcat:'badge-green',absent:'badge-red',rezervat:'badge-blue'}[s]||'badge-gray';}
+function statusLabel(s){return{urcat:'Urcat',absent:'Absent',rezervat:'Rezervat'}[s]||s;}
+
+// ===== LOGIN =====
+function selectRole(r){selectedRole=r;document.querySelectorAll('.role-opt').forEach(el=>el.classList.remove('active'));document.getElementById('role-'+r).classList.add('active');}
+function doLogin(){
+  const u=document.getElementById('loginUser').value.trim(),p=document.getElementById('loginPass').value.trim();
+  const err=document.getElementById('loginErr'),ud=USERS[u];
+  if(!ud||ud.pass!==p||ud.rol!==selectedRole){err.style.display='block';return;}
+  err.style.display='none';currentUser={...ud,username:u};startApp();
+}
+function doLogout(){currentUser=null;document.getElementById('app').classList.remove('visible');document.getElementById('loginWrap').style.display='flex';}
+
+function startApp(){
+  document.getElementById('loginWrap').style.display='none';
+  document.getElementById('app').classList.add('visible');
+  document.getElementById('topbarRole').textContent=rolLabel(currentUser.rol);
+  document.getElementById('topbarUser').textContent=currentUser.nume+' ('+currentUser.username+')';
+  updateTopbarCursa();
+  buildNav();
+  showPage(currentUser.rol==='sofer'?'microbuz-sofer':'curse');
+}
+function rolLabel(r){return{admin:'Administrator',sef:'Șef de cursă',sofer:'Șofer microbuz'}[r];}
+
+function updateTopbarCursa(){
+  const ca=cursaActiva();
+  const el=document.getElementById('topbarCursaInfo');
+  if(ca){
+    const pax=rezervari.filter(r=>r.cursaId===ca.id).length;
+    el.textContent=`🚌 Cursa ${ca.data}: ${pax}/${ca.locuri}`;
+    el.style.display='inline-flex';
+  } else {el.style.display='none';}
+}
+
+function buildNav(){
+  const nav=document.getElementById('mainNav'),rol=currentUser.rol;
+  let items=[];
+  if(rol==='sofer'){items=[{id:'microbuz-sofer',label:'Microbuzul meu'},{id:'pasageri',label:'Pasagerii mei'}];}
+  else{
+    items=[{id:'curse',label:'Curse'},{id:'pasageri',label:'Pasageri'},{id:'opriri',label:'Opriri'},{id:'microbuz',label:'Microbuzuri'}];
+    if(rol==='admin')items.push({id:'baza',label:'Baza de date'},{id:'rapoarte',label:'Rapoarte'});
+  }
+  nav.innerHTML=items.map(i=>`<button class="nav-item" id="nav-${i.id}" onclick="showPage('${i.id}')">${i.label}</button>`).join('');
+}
+
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  const pg=document.getElementById('page-'+id);if(pg)pg.classList.add('active');
+  const ni=document.getElementById('nav-'+id);if(ni)ni.classList.add('active');
+  if(id==='curse')renderCurse();if(id==='pasageri')renderPasageri();
+  if(id==='opriri')renderOpririPage();if(id==='microbuz')renderMicrobuzAdminPage();
+  if(id==='microbuz-sofer')renderMicrobuzSofer();if(id==='baza')renderBaza();if(id==='rapoarte')renderRapoarte();
+}
+
+// ===== CURSE =====
+function renderCurse(){
+  const list=document.getElementById('curseList'),myCurse=getCurseForRole();
+  if(!myCurse.length){list.innerHTML='<div class="empty-state"><div class="empty-icon">🚌</div>Nu există curse disponibile.</div>';return;}
+  list.innerHTML=myCurse.map(c=>{
+    const pax=rezervari.filter(r=>r.cursaId===c.id);
+    const urcati=pax.filter(r=>r.status==='urcat').length;
+    const mbCount=microbuzuri.filter(m=>m.cursaId===c.id).length;
+    const incasat=pax.filter(r=>r.plata==='platit').reduce((s,r)=>s+(r.pret||0),0);
+    return`<div class="card" style="margin-bottom:12px;${c.arhivata?'opacity:.85;':''}">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;font-family:'Inter',system-ui,sans-serif;font-weight:800;font-size:16px;">
+            Chișinău → Italia
+            <span class="cursa-tag ${c.arhivata?'cursa-arhivata':'cursa-activa'}">${c.arhivata?'🔒 Arhivată':'✓ Activă'}</span>
+          </div>
+          <div style="font-size:13px;color:var(--muted);margin-top:3px;">📅 ${c.data} la ${c.ora} &nbsp;·&nbsp; 📍 ${(c.opriri||[]).join(' → ')}</div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="openDetaliiCursa(${c.id})">Detalii</button>
+          <button class="btn btn-green btn-sm" onclick="duplicateCursa(${c.id})">⧉ Duplică</button>
+          ${!c.arhivata?`<button class="btn btn-primary btn-sm" onclick="openModalRezervare(${c.id})">+ Pasager</button>
+          <button class="btn btn-amber btn-sm" onclick="arhiveazaCursa(${c.id})">🔒 Arhivează</button>`:''}
+        </div>
+      </div>
+      <div style="display:flex;gap:20px;margin-top:14px;flex-wrap:wrap;">
+        <div><span style="font-size:18px;font-weight:600;font-family:'Inter',system-ui,sans-serif;color:var(--orange);">${pax.length}</span><span style="font-size:12px;color:var(--muted);margin-left:4px;">/ ${c.locuri} pasageri</span></div>
+        <div><span style="font-size:18px;font-weight:600;font-family:'Inter',system-ui,sans-serif;color:var(--green);">${urcati}</span><span style="font-size:12px;color:var(--muted);margin-left:4px;">urcați</span></div>
+        <div><span style="font-size:18px;font-weight:600;font-family:'Inter',system-ui,sans-serif;">${c.locuri-pax.length}</span><span style="font-size:12px;color:var(--muted);margin-left:4px;">locuri libere</span></div>
+        <div><span style="font-size:18px;font-weight:600;font-family:'Inter',system-ui,sans-serif;color:var(--blue);">${mbCount}</span><span style="font-size:12px;color:var(--muted);margin-left:4px;">microbuzuri</span></div>
+        <div><span style="font-size:18px;font-weight:600;font-family:'Inter',system-ui,sans-serif;color:var(--green);">${incasat}</span><span style="font-size:12px;color:var(--muted);margin-left:4px;">€ incasat</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function arhiveazaCursa(cursaId){
+  const c=curse.find(x=>x.id===cursaId);
+  if(!confirm(`Arhivezi cursa din ${c.data}? Nu va mai putea fi editată.`))return;
+  c.arhivata=true;
+  renderCurse();updateTopbarCursa();
+}
+
+function duplicateCursa(cursaId){
+  const c=curse.find(x=>x.id===cursaId);
+  opririEditorList=[...(c.opriri||OPRIRI_DEFAULT)];
+  document.getElementById('modalCursaTitle').textContent='Cursă nouă (duplicată)';
+  document.getElementById('cData').value='';
+  document.getElementById('cOra').value=c.ora;
+  document.getElementById('cLocuri').value=c.locuri;
+  document.getElementById('cPretImplicit').value=c.pretImplicit||150;
+  document.getElementById('cObs').value=c.obs||'';
+  renderOpririEditor();openModal('modalCursa');
+}
+
+// ===== MODAL CURSA =====
+function openModalCursa(){
+  opririEditorList=[...OPRIRI_DEFAULT];
+  document.getElementById('modalCursaTitle').textContent='Cursă nouă';
+  ['cData','cOra','cObs'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('cLocuri').value=54;document.getElementById('cPretImplicit').value=150;
+  renderOpririEditor();openModal('modalCursa');
+}
+function renderOpririEditor(){
+  document.getElementById('opririList').innerHTML=opririEditorList.map((op,i)=>`
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="width:20px;height:20px;background:var(--orange);color:white;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">${i+1}</span>
+      <input type="text" value="${op}" style="flex:1;margin-bottom:0;" onchange="opririEditorList[${i}]=this.value" />
+      <button onclick="opririEditorList.splice(${i},1);renderOpririEditor();" style="background:var(--red-bg);color:var(--red);border:none;border-radius:6px;padding:4px 8px;cursor:pointer;font-size:13px;">✕</button>
+    </div>`).join('');
+}
+function addOprireaLista(){opririEditorList.push('Oprire nouă');renderOpririEditor();}
+function saveCursa(){
+  const data=document.getElementById('cData').value.trim(),ora=document.getElementById('cOra').value.trim();
+  const locuri=parseInt(document.getElementById('cLocuri').value)||54;
+  const pretImplicit=parseFloat(document.getElementById('cPretImplicit').value)||150;
+  const obs=document.getElementById('cObs').value.trim();
+  if(!data||!ora){alert('Completează data și ora!');return;}
+  const inputs=document.querySelectorAll('#opririList input');
+  const opriri=[...inputs].map(inp=>inp.value.trim()).filter(Boolean);
+  const newId=nextCursaId++;
+  curse.push({id:newId,data,ora,locuri,pretImplicit,obs,opriri,arhivata:false});
+  closeModal('modalCursa');renderCurse();updateTopbarCursa();
+}
+
+function openDetaliiCursa(cursaId){
+  const c=curse.find(x=>x.id===cursaId),pax=rezervari.filter(r=>r.cursaId===cursaId);
+  const incasat=pax.filter(r=>r.plata==='platit').reduce((s,r)=>s+(r.pret||0),0);
+  const total=pax.reduce((s,r)=>s+(r.pret||0),0);
+  document.getElementById('detaliiCursaTitle').textContent=`Cursă ${c.data} — ${c.ora} ${c.arhivata?'🔒':''} `;
+  document.getElementById('detaliiCursaContent').innerHTML=`
+    <div class="stats-grid" style="margin-bottom:1rem;">
+      <div class="stat-card"><div class="stat-val">${pax.length}</div><div class="stat-lbl">/ ${c.locuri} pasageri</div></div>
+      <div class="stat-card"><div class="stat-val">${c.locuri-pax.length}</div><div class="stat-lbl">Locuri libere</div></div>
+      <div class="stat-card"><div class="stat-val">${pax.filter(r=>r.status==='urcat').length}</div><div class="stat-lbl">Urcați</div></div>
+      <div class="stat-card"><div class="stat-val" style="color:var(--green);">${incasat}€</div><div class="stat-lbl">/ ${total}€</div></div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:10px;">📍 ${(c.opriri||[]).join(' → ')}</p>
+    ${c.arhivata?'<div class="alert alert-amber">🔒 Cursă arhivată — doar vizualizare.</div>':''}
+    <div class="pax-list">${pax.map(r=>`<div class="pax-row">
+      <div class="pax-num">${r.loc}</div>
+      <div style="flex:1;"><div style="font-size:14px;font-weight:500;">${r.nume}</div><div style="font-size:12px;color:var(--muted);">${r.urcare} → ${r.dest} · ${r.tel}</div></div>
+      <span class="badge ${plataBadge(r.plata)}" style="margin-right:4px;">${plataLabel(r.plata)}</span>
+      <span class="badge ${statusBadge(r.status)}">${statusLabel(r.status)}</span>
+    </div>`).join('')}</div>
+    ${!pax.length?'<div class="empty-state"><div class="empty-icon">🎫</div>Nu sunt rezervări.</div>':''}`;
+  openModal('modalDetaliiCursa');
+}
+
+// ===== PASAGERI =====
+function getPasageriForRole(){
+  const rol=currentUser.rol;
+  if(rol==='admin'||rol==='sef'){const ids=getCurseForRole().map(c=>c.id);return rezervari.filter(r=>ids.includes(r.cursaId));}
+  if(rol==='sofer'){const mb=microbuzuri.find(m=>m.soferUsername===currentUser.username&&!curse.find(c=>c.id===m.cursaId)?.arhivata);if(!mb)return[];return rezervari.filter(r=>r.cursaId===mb.cursaId&&mb.destinatii.includes(r.dest));}
+  return[];
+}
+
+function renderPasageri(){
+  const search=(document.getElementById('searchPax').value||'').toLowerCase();
+  const selC=document.getElementById('filterCursa'),prevC=selC.value;
+  selC.innerHTML='<option value="">Toate cursele</option>'+getCurseForRole().map(c=>`<option value="${c.id}" ${prevC==c.id?'selected':''}>${c.data} ${c.ora}${c.arhivata?' 🔒':''}</option>`).join('');
+
+  const selO=document.getElementById('filterOprire'),prevO=selO.value;
+  let opOpts=[];
+  if(selC.value){const c=curse.find(x=>x.id==selC.value);opOpts=c?.opriri||[];}
+  else{const all=new Set();getCurseForRole().forEach(c=>(c.opriri||[]).forEach(o=>all.add(o)));opOpts=[...all];}
+  selO.innerHTML='<option value="">Toate opririle</option>'+opOpts.map(o=>`<option value="${o}" ${prevO===o?'selected':''}>${o}</option>`).join('');
+
+  const filterPlata=document.getElementById('filterPlata').value;
+  let pax=getPasageriForRole();
+  if(selC.value)pax=pax.filter(r=>r.cursaId==selC.value);
+  if(selO.value)pax=pax.filter(r=>r.urcare===selO.value);
+  if(search)pax=pax.filter(r=>r.nume.toLowerCase().includes(search)||r.tel.includes(search));
+  if(filterPlata)pax=pax.filter(r=>r.plata===filterPlata);
+
+  const cursaSel=selC.value?curse.find(x=>x.id==selC.value):null;
+  const totalInCursa=cursaSel?rezervari.filter(r=>r.cursaId==selC.value).length:null;
+  document.getElementById('pasageriSub').textContent=totalInCursa!==null?`${totalInCursa} pasageri în cursă · ${pax.length} afișați`:`${pax.length} pasageri`;
+
+  // hide add btn for archived
+  const btnAdd=document.getElementById('btnAddRez');
+  if(cursaSel?.arhivata)btnAdd.style.display='none';else btnAdd.style.display='';
+
+  const total=pax.reduce((s,r)=>s+(r.pret||0),0);
+  const incasat=pax.filter(r=>r.plata==='platit').reduce((s,r)=>s+(r.pret||0),0);
+  document.getElementById('finStats').innerHTML=`
+    <div class="stat-card"><div class="stat-val">${pax.length}</div><div class="stat-lbl">Pasageri afișați</div></div>
+    <div class="stat-card"><div class="stat-val" style="color:var(--green);">${incasat} €</div><div class="stat-lbl">Încasat</div></div>
+    <div class="stat-card"><div class="stat-val" style="color:var(--amber);">${pax.filter(r=>r.plata==='avans').reduce((s,r)=>s+(r.pret||0),0)} €</div><div class="stat-lbl">Avans</div></div>
+    <div class="stat-card"><div class="stat-val" style="color:var(--red);">${pax.filter(r=>r.plata==='neplatit').reduce((s,r)=>s+(r.pret||0),0)} €</div><div class="stat-lbl">Neplătit</div></div>
+    <div class="stat-card"><div class="stat-val">${total} €</div><div class="stat-lbl">Total</div></div>`;
+
+  const body=document.getElementById('pasageriBody'),empty=document.getElementById('emptyPax');
+  if(!pax.length){body.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+
+  const mbOptCache={};
+  body.innerHTML=pax.map(r=>{
+    const cursaR=curse.find(c=>c.id===r.cursaId);
+    const isArh=cursaR?.arhivata;
+    if(!mbOptCache[r.cursaId]){
+      const mbs=microbuzuri.filter(m=>m.cursaId===r.cursaId);
+      mbOptCache[r.cursaId]='<option value="">— neatribuit —</option>'+mbs.map(m=>{
+        const cnt=mbPaxCount(m);const plin=cnt>=MB_CAP;
+        return`<option value="${m.id}" ${plin?'disabled':''}>${plin?'🔴':cnt>=MB_CAP*0.85?'🟡':'🟢'} ${m.nume} ${m.nr?'('+m.nr+')':''} (${cnt}/${MB_CAP})</option>`;
+      }).join('');
+    }
+    const mbAssigned=microbuzuri.find(m=>m.id===r.mbId&&m.cursaId===r.cursaId);
+    const mbOpts=mbOptCache[r.cursaId].replace(`value="${mbAssigned?.id}"`,`value="${mbAssigned?.id}" selected`);
+    return`<tr>
+      <td><span class="badge badge-orange" style="font-family:'Inter',system-ui,sans-serif;">${r.loc}</span></td>
+      <td><strong>${r.nume}</strong>${isArh?'<span class="badge badge-gray" style="margin-left:4px;font-size:10px;">🔒</span>':''}</td>
+      <td style="color:var(--muted);">${r.tel}</td>
+      <td>${r.urcare}</td><td>${r.dest}</td>
+      <td>${r.pret?r.pret+' €':'—'}</td>
+      <td>${isArh?`<span class="badge ${plataBadge(r.plata)}">${plataLabel(r.plata)}</span>`:`
+        <select style="font-size:12px;padding:4px 8px;margin:0;width:auto;background:${plataColor(r.plata)};color:${plataTextColor(r.plata)};border:none;border-radius:20px;font-weight:500;" onchange="changePlata(${r.id},this.value)">
+          <option value="platit" ${r.plata==='platit'?'selected':''}>✓ Plătit</option>
+          <option value="avans" ${r.plata==='avans'?'selected':''}>~ Avans</option>
+          <option value="neplatit" ${r.plata==='neplatit'?'selected':''}>✗ Neplătit</option>
+        </select>`}
+      </td>
+      <td>${isArh?(mbAssigned?`<span class="badge badge-blue">${mbAssigned.nume}</span>`:'—'):`<select style="font-size:12px;padding:4px 8px;margin:0;width:auto;" onchange="changeMb(${r.id},this.value,${r.cursaId})">${mbOpts}</select>`}</td>
+      <td style="font-size:12px;color:var(--muted);">${r.bagaje||'—'}</td>
+      <td>${r.nota?`<span class="nota-chip" title="${r.nota}">📝 ${r.nota}</span>`:''} ${!isArh?`<button onclick="openNota(${r.id})" style="background:none;border:none;cursor:pointer;font-size:12px;color:var(--muted);">✏</button>`:''}</td>
+      <td>${isArh?`<span class="badge ${statusBadge(r.status)}">${statusLabel(r.status)}</span>`:`
+        <select onchange="changeStatus(${r.id},this.value)" style="font-size:12px;padding:4px 8px;margin:0;width:auto;">
+          <option value="rezervat" ${r.status==='rezervat'?'selected':''}>Rezervat</option>
+          <option value="urcat" ${r.status==='urcat'?'selected':''}>Urcat</option>
+          <option value="absent" ${r.status==='absent'?'selected':''}>Absent</option>
+        </select>`}
+      </td>
+      <td>${(!isArh&&currentUser.rol!=='sofer')?`<button class="btn btn-danger btn-sm" onclick="deleteRez(${r.id})">✕</button>`:''}</td>
+    </tr>`;
+  }).join('');
+}
+
+function changeMb(rezId,mbId,cursaId){
+  const r=rezervari.find(x=>x.id===rezId);if(!r)return;
+  if(!mbId){r.mbId=null;renderPasageri();return;}
+  const mb=microbuzuri.find(m=>m.id==mbId&&m.cursaId===cursaId);if(!mb)return;
+  const cnt=rezervari.filter(x=>x.cursaId===cursaId&&mb.destinatii.includes(x.dest)&&x.id!==rezId).length;
+  if(cnt>=MB_CAP){alert(`⚠️ ${mb.nume} este plin! Maximum ${MB_CAP} pasageri.`);renderPasageri();return;}
+  if(cnt>=MB_CAP*0.85){if(!confirm(`⚠️ ${mb.nume} are ${cnt}/${MB_CAP} locuri. Continui?`)){renderPasageri();return;}}
+  r.mbId=parseInt(mbId);renderPasageri();
+}
+
+function changePlata(rezId,val){const r=rezervari.find(x=>x.id===rezId);if(r){r.plata=val;renderPasageri();updateTopbarCursa();}}
+function changeStatus(rezId,val){const r=rezervari.find(x=>x.id===rezId);if(r)r.status=val;}
+function deleteRez(rezId){if(!confirm('Ștergi rezervarea?'))return;rezervari=rezervari.filter(r=>r.id!==rezId);renderPasageri();updateTopbarCursa();}
+
+// ===== NOTA =====
+function openNota(rezId){notaRezId=rezId;const r=rezervari.find(x=>x.id===rezId);document.getElementById('notaText').value=r?.nota||'';openModal('modalNota');}
+function saveNota(){const r=rezervari.find(x=>x.id===notaRezId);if(r)r.nota=document.getElementById('notaText').value.trim();closeModal('modalNota');renderPasageri();}
+
+// ===== REZERVARE =====
+function openModalRezervare(cursaId){
+  editRezId=null;
+  const ca=cursaActiva();
+  const targetId=cursaId||ca?.id;
+  const activeCurse=getCurseForRole().filter(c=>!c.arhivata);
+  const sel=document.getElementById('rCursa');
+  sel.innerHTML='<option value="">— alege cursa —</option>'+activeCurse.map(c=>`<option value="${c.id}" ${c.id===targetId?'selected':''}>${c.data} ${c.ora}</option>`).join('');
+  selectedSeat=null;
+  ['rNume','rTel','rBagaje','rNota'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('rPlata').value='neplatit';
+  // set default price from selected cursa
+  const selC=activeCurse.find(c=>c.id===targetId);
+  document.getElementById('rPret').value=selC?.pretImplicit||150;
+  onCursaChange();openModal('modalRezervare');
+}
+function onCursaChange(){
+  updateSeatMap();updateUrcareOptions();
+  const cursaId=parseInt(document.getElementById('rCursa').value);
+  const c=curse.find(x=>x.id===cursaId);
+  if(c)document.getElementById('rPret').value=c.pretImplicit||150;
+}
+function updateUrcareOptions(){
+  const cursaId=parseInt(document.getElementById('rCursa').value);
+  const sel=document.getElementById('rUrcare');
+  const opriri=cursaId?curse.find(x=>x.id===cursaId)?.opriri||OPRIRI_DEFAULT:OPRIRI_DEFAULT;
+  sel.innerHTML=opriri.map(op=>`<option>${op}</option>`).join('');
+}
+function updateSeatMap(){
+  const cursaId=parseInt(document.getElementById('rCursa').value);
+  const map=document.getElementById('seatMapModal');
+  if(!cursaId){map.innerHTML='<p style="font-size:13px;color:var(--muted);">Alege mai întâi o cursă.</p>';return;}
+  const c=curse.find(x=>x.id===cursaId);
+  const taken=rezervari.filter(r=>r.cursaId===cursaId&&r.id!==editRezId).map(r=>r.loc);
+  let html='';
+  for(let i=1;i<=c.locuri;i++){const isTaken=taken.includes(i),isSel=selectedSeat===i;html+=`<div class="seat ${isSel?'selected':isTaken?'taken':'free'}" onclick="selectSeat(${i},${isTaken})">${i}</div>`;}
+  map.innerHTML=html;
+}
+function selectSeat(n,isTaken){if(isTaken)return;selectedSeat=selectedSeat===n?null:n;updateSeatMap();}
+function saveRezervare(){
+  const cursaId=parseInt(document.getElementById('rCursa').value);
+  const cursaR=curse.find(c=>c.id===cursaId);
+  if(cursaR?.arhivata){alert('Cursa este arhivată!');return;}
+  const nume=document.getElementById('rNume').value.trim(),tel=document.getElementById('rTel').value.trim();
+  const urcare=document.getElementById('rUrcare').value,dest=document.getElementById('rDest').value;
+  const pret=parseFloat(document.getElementById('rPret').value)||0,plata=document.getElementById('rPlata').value;
+  const bagaje=document.getElementById('rBagaje').value.trim(),nota=document.getElementById('rNota').value.trim();
+  if(!cursaId){alert('Alege cursa!');return;}if(!selectedSeat){alert('Alege un loc!');return;}
+  if(!nume){alert('Introdu numele!');return;}if(!tel){alert('Introdu telefonul!');return;}
+  if(editRezId){const r=rezervari.find(x=>x.id===editRezId);if(r)Object.assign(r,{cursaId,loc:selectedSeat,nume,tel,urcare,dest,pret,plata,bagaje,nota});}
+  else{rezervari.push({id:nextRezId++,cursaId,loc:selectedSeat,nume,tel,urcare,dest,pret,plata,bagaje,nota,status:'rezervat'});}
+  closeModal('modalRezervare');editRezId=null;selectedSeat=null;renderPasageri();renderCurse();updateTopbarCursa();
+}
+
+// ===== EXPORT PDF =====
+function exportPDF(){
+  const cursaId=document.getElementById('filterCursa').value;
+  const c=cursaId?curse.find(x=>x.id==cursaId):null;
+  let pax=getPasageriForRole();if(cursaId)pax=pax.filter(r=>r.cursaId==cursaId);
+  const total=pax.reduce((s,r)=>s+(r.pret||0),0),incasat=pax.filter(r=>r.plata==='platit').reduce((s,r)=>s+(r.pret||0),0);
+  const win=window.open('','_blank');
+  win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Starbus — Listă pasageri</title>
+  <style>body{font-family:Arial,sans-serif;font-size:12px;color:#1a1410;padding:20px;}h1{font-size:20px;margin-bottom:4px;color:#ff6a00;}.sub{color:#888;font-size:12px;margin-bottom:16px;}
+  table{width:100%;border-collapse:collapse;}th{background:#ff6a00;color:white;padding:7px 8px;text-align:left;font-size:11px;}td{padding:6px 8px;border-bottom:1px solid #ede9e3;font-size:11px;}
+  tr:nth-child(even)td{background:#fafaf9;}.fin{display:flex;gap:20px;margin-top:12px;padding:10px;background:#fff3ec;border-radius:8px;}.fin div{font-size:12px;}.fin strong{font-size:16px;display:block;}
+  .p{background:#eaf7f0;color:#1a7a4a;border-radius:10px;padding:2px 7px;font-size:10px;font-weight:600;}.a{background:#fffbeb;color:#b45309;border-radius:10px;padding:2px 7px;font-size:10px;font-weight:600;}.n{background:#fdf0ef;color:#c0392b;border-radius:10px;padding:2px 7px;font-size:10px;font-weight:600;}
+  </style>
+<script>
+const _manifest = {
+  "name": "Starbus",
+  "short_name": "Starbus", 
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6a00",
+  "icons": [{"src": "data:image/png;base64,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", "sizes": "192x192", "type": "image/png"}]
+};
+const _blob = new Blob([JSON.stringify(_manifest)], {type:'application/manifest+json'});
+const _url = URL.createObjectURL(_blob);
+const _link = document.createElement('link');
+_link.rel = 'manifest'; _link.href = _url;
+document.head.appendChild(_link);
+</script>
+</head><body>
+  <h1>★ Starbus</h1>
+  <div class="sub">${c?`Cursă ${c.data} la ${c.ora}`:'Toți pasagerii'} | Generat: ${new Date().toLocaleDateString('ro-RO')}</div>
+  ${c?`<div style="font-size:12px;color:#888;margin-bottom:8px;">📍 ${(c.opriri||[]).join(' → ')}</div>`:''}
+  <table><thead><tr><th>#</th><th>Loc</th><th>Nume</th><th>Telefon</th><th>Urcare</th><th>Destinație</th><th>Preț</th><th>Plată</th><th>Microbuz</th><th>Bagaje</th><th>Notă</th><th>Status</th></tr></thead>
+  <tbody>${pax.map((r,i)=>{const mb=microbuzuri.find(m=>m.id===r.mbId&&m.cursaId===r.cursaId);return`<tr><td>${i+1}</td><td>${r.loc}</td><td><strong>${r.nume}</strong></td><td>${r.tel}</td><td>${r.urcare}</td><td>${r.dest}</td><td>${r.pret?r.pret+' €':'—'}</td>
+  <td><span class="${r.plata==='platit'?'p':r.plata==='avans'?'a':'n'}">${plataLabel(r.plata)}</span></td><td>${mb?mb.nume+' '+(mb.nr||''):'—'}</td><td>${r.bagaje||'—'}</td><td style="color:#6d28d9;">${r.nota||''}</td><td>${statusLabel(r.status)}</td></tr>`;}).join('')}</tbody></table>
+  <div class="fin"><div><strong style="color:#1a7a4a;">${incasat} €</strong>Încasat</div><div><strong style="color:#b45309;">${pax.filter(r=>r.plata==='avans').reduce((s,r)=>s+(r.pret||0),0)} €</strong>Avans</div><div><strong style="color:#c0392b;">${pax.filter(r=>r.plata==='neplatit').reduce((s,r)=>s+(r.pret||0),0)} €</strong>Neplătit</div><div><strong>${total} €</strong>Total</div></div>
+  </body></html>`);win.document.close();setTimeout(()=>win.print(),400);
+}
+
+// ===== OPRIRI =====
+function renderOpririPage(){
+  const sel=document.getElementById('opririCursa');
+  sel.innerHTML='<option value="">— alege cursa —</option>'+getCurseForRole().map(c=>`<option value="${c.id}">${c.data} ${c.ora}${c.arhivata?' 🔒':''}</option>`).join('');
+  document.getElementById('opririContent').innerHTML='';
+}
+function renderOpriri(){
+  const cursaId=parseInt(document.getElementById('opririCursa').value);
+  const cont=document.getElementById('opririContent');if(!cursaId){cont.innerHTML='';return;}
+  const c=curse.find(x=>x.id===cursaId),pax=rezervari.filter(r=>r.cursaId===cursaId);
+  const opriri=c.opriri||OPRIRI_DEFAULT;
+  cont.innerHTML=`<div class="card"><div class="card-title">Ruta completă — ${c.data}</div>
+    <div class="stops-timeline">${opriri.map((op,idx)=>{
+      const pp=pax.filter(r=>r.urcare===op),isLast=idx===opriri.length-1;
+      return`<div class="stop-item">
+        <div class="stop-left"><div class="stop-dot ${idx===0||isLast?'filled':''}"></div>${!isLast?'<div class="stop-line"></div>':''}</div>
+        <div class="stop-content">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:${pp.length?'6px':'0'};">
+            <div style="font-weight:500;font-size:14px;">${op}</div>
+            ${pp.length?`<span class="badge badge-orange">${pp.length} pasageri</span>`:'<span style="font-size:12px;color:var(--muted);">fără pasageri</span>'}
+          </div>
+          ${pp.length?pp.map(r=>{const mb=microbuzuri.find(m=>m.id===r.mbId&&m.cursaId===cursaId);return`<div class="stop-pax-item">
+            <span class="badge badge-orange" style="font-size:10px;">${r.loc}</span>
+            <strong>${r.nume}</strong>
+            <span style="color:var(--muted);">→ ${r.dest}</span>
+            <span style="color:var(--muted);">· ${r.tel}</span>
+            ${r.bagaje?`<span style="color:var(--muted);">· 🧳 ${r.bagaje}</span>`:''}
+            ${mb?`<span class="badge badge-blue">${mb.nume}</span>`:''}
+            ${r.nota?`<span class="nota-chip">📝 ${r.nota}</span>`:''}
+            <span class="badge ${plataBadge(r.plata)}" style="margin-left:auto;">${plataLabel(r.plata)}</span>
+          </div>`;}).join(''):''}
+        </div>
+      </div>`;
+    }).join('')}</div></div>`;
+}
+function exportPDFOpriri(){
+  const cursaId=parseInt(document.getElementById('opririCursa').value);
+  if(!cursaId){alert('Alege mai întâi o cursă!');return;}
+  const c=curse.find(x=>x.id===cursaId),pax=rezervari.filter(r=>r.cursaId===cursaId);
+  const win=window.open('','_blank');
+  win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Starbus — Opriri</title>
+  <style>body{font-family:Arial,sans-serif;font-size:12px;color:#1a1410;padding:20px;}h1{font-size:20px;margin-bottom:4px;color:#ff6a00;}.sub{color:#888;font-size:12px;margin-bottom:20px;}
+  .stop{margin-bottom:18px;border-left:3px solid #ff6a00;padding-left:14px;}.stop-name{font-size:15px;font-weight:700;margin-bottom:6px;}
+  table{width:100%;border-collapse:collapse;}th{background:#fff3ec;color:#cc5500;padding:5px 8px;text-align:left;font-size:11px;}td{padding:5px 8px;border-bottom:1px solid #ede9e3;font-size:11px;}</style>
+<script>
+const _manifest = {
+  "name": "Starbus",
+  "short_name": "Starbus", 
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6a00",
+  "icons": [{"src": "data:image/png;base64,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", "sizes": "192x192", "type": "image/png"}]
+};
+const _blob = new Blob([JSON.stringify(_manifest)], {type:'application/manifest+json'});
+const _url = URL.createObjectURL(_blob);
+const _link = document.createElement('link');
+_link.rel = 'manifest'; _link.href = _url;
+document.head.appendChild(_link);
+</script>
+</head><body>
+  <h1>★ Starbus — Opriri</h1>
+  <div class="sub">Cursă ${c.data} la ${c.ora} | ${(c.opriri||[]).join(' → ')} | Generat: ${new Date().toLocaleDateString('ro-RO')}</div>
+  ${(c.opriri||[]).map(op=>{const pp=pax.filter(r=>r.urcare===op);
+    return`<div class="stop"><div class="stop-name">📍 ${op} ${pp.length?'('+pp.length+' pasageri)':''}</div>
+    ${pp.length?`<table><thead><tr><th>Loc</th><th>Nume</th><th>Telefon</th><th>Destinație</th><th>Microbuz</th><th>Bagaje</th><th>Plată</th></tr></thead>
+    <tbody>${pp.map(r=>{const mb=microbuzuri.find(m=>m.id===r.mbId&&m.cursaId===c.id);return`<tr><td>${r.loc}</td><td><strong>${r.nume}</strong></td><td>${r.tel}</td><td>${r.dest}</td><td>${mb?mb.nume+' '+(mb.nr||''):'—'}</td><td>${r.bagaje||'—'}</td><td>${plataLabel(r.plata)}</td></tr>`;}).join('')}</tbody></table>`
+    :'<div style="color:#aaa;">Niciun pasager.</div>'}</div>`;}).join('')}
+  </body></html>`);win.document.close();setTimeout(()=>win.print(),400);
+}
+
+// ===== MICROBUZ ADMIN =====
+function renderMicrobuzAdminPage(){
+  const sel=document.getElementById('mbFilterCursa');
+  const curseMele=getCurseForRole();
+  const ca=cursaActiva();
+  sel.innerHTML=curseMele.map(c=>`<option value="${c.id}" ${c.id===ca?.id?'selected':''}>${c.data} ${c.ora}${c.arhivata?' 🔒':''}</option>`).join('');
+  renderMicrobuzAdmin();
+}
+
+function renderMicrobuzAdmin(){
+  const cursaId=parseInt(document.getElementById('mbFilterCursa').value);
+  const cont=document.getElementById('mbAdminContent');
+  if(!cursaId){cont.innerHTML='';return;}
+  const cursaR=curse.find(c=>c.id===cursaId);
+  const isArh=cursaR?.arhivata;
+
+  // hide add btn if archived
+  document.getElementById('btnAddMb').style.display=isArh?'none':'';
+  document.getElementById('mbPageSub').textContent=isArh?`Cursă arhivată ${cursaR.data}`:`Cursa ${cursaR?.data||''} — max ${MB_CAP} pasageri/microbuz`;
+
+  const mbs=microbuzuri.filter(m=>m.cursaId===cursaId);
+  if(!mbs.length){
+    cont.innerHTML=`<div class="empty-state"><div class="empty-icon">🚐</div>Nu există microbuzuri pentru această cursă.${!isArh?'<br><br><button class="btn btn-primary btn-sm" onclick="openModalAddMb()">+ Adaugă microbuz</button>':''}</div>`;
+    return;
+  }
+  cont.innerHTML=mbs.map(mb=>{
+    const pax=rezervari.filter(r=>r.cursaId===cursaId&&mb.destinatii.includes(r.dest));
+    const cnt=pax.length,pct=Math.round(cnt/MB_CAP*100);
+    const isFull=cnt>=MB_CAP,isWarn=cnt>=MB_CAP*0.85&&!isFull;
+    const fillColor=isFull?'var(--red)':isWarn?'var(--amber)':'var(--green)';
+    const soferNume=USERS[mb.soferUsername]?.nume||mb.soferUsername;
+    const bagajeList=pax.filter(r=>r.bagaje).map(r=>r.bagaje);
+    return`<div class="mb-card ${isFull?'full':isWarn?'warn':''}${isArh?' archived':''}">
+      <div class="mb-header">
+        <div>
+          <div class="mb-name">${mb.nume} ${mb.nr?`<span style="font-size:13px;color:var(--muted);font-weight:400;">· ${mb.nr}</span>`:''} ${isFull?'🔴':isWarn?'🟡':'🟢'}</div>
+          <div class="mb-dest">Destinații: ${mb.destinatii.join(', ')}</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          <span class="sofer-chip">🚐 ${soferNume}</span>
+          ${!isArh?`<button class="btn btn-secondary btn-sm" onclick="openSchimbSofer(${mb.id})">Schimbă șofer</button>`:''}
+          <span class="badge ${isFull?'badge-red':isWarn?'badge-amber':'badge-green'}">${cnt} / ${MB_CAP}</span>
+          ${!isArh?`<button class="btn btn-danger btn-sm" onclick="deleteMb(${mb.id})">✕</button>`:''}
+        </div>
+      </div>
+      <div class="cap-bar"><div class="cap-fill" style="width:${Math.min(pct,100)}%;background:${fillColor};"></div></div>
+      ${isFull?`<div class="alert alert-red" style="margin-top:10px;margin-bottom:0;">⚠️ Microbuz plin! Maximum ${MB_CAP} pasageri.</div>`:''}
+      ${isWarn?`<div class="alert alert-amber" style="margin-top:10px;margin-bottom:0;">⚠️ Aproape plin (${cnt}/${MB_CAP}).</div>`:''}
+      ${bagajeList.length?`<div style="margin-top:8px;font-size:12px;color:var(--muted);">🧳 Bagaje: ${bagajeList.join(' · ')}</div>`:''}
+      ${pax.length?`<div class="pax-list" style="margin-top:10px;">${pax.map((r,i)=>`<div class="pax-row">
+        <div class="pax-num">${i+1}</div>
+        <div style="flex:1;"><div style="font-size:14px;font-weight:500;">${r.nume}</div><div style="font-size:12px;color:var(--muted);">${r.dest} · Loc ${r.loc} · ${r.tel}${r.bagaje?' · 🧳 '+r.bagaje:''}${r.nota?' · 📝 '+r.nota:''}</div></div>
+        <span class="badge ${plataBadge(r.plata)}" style="margin-right:6px;">${plataLabel(r.plata)}</span>
+        <span class="badge ${statusBadge(r.status)}">${statusLabel(r.status)}</span>
+      </div>`).join('')}</div>`:`<p style="font-size:13px;color:var(--muted);margin-top:10px;">Niciun pasager.</p>`}
+    </div>`;
+  }).join('');
+}
+
+// ===== SCHIMB SOFER =====
+function openSchimbSofer(mbId){
+  schimbSoferMbId=mbId;
+  const mb=microbuzuri.find(m=>m.id===mbId);
+  document.getElementById('schimbSoferTitle').textContent=`Schimbă șoferul — ${mb.nume}`;
+  document.getElementById('schimbSoferSel').value=mb.soferUsername||'sofer1';
+  openModal('modalSchimbSofer');
+}
+function saveSchimbSofer(){
+  const mb=microbuzuri.find(m=>m.id===schimbSoferMbId);
+  if(mb)mb.soferUsername=document.getElementById('schimbSoferSel').value;
+  closeModal('modalSchimbSofer');renderMicrobuzAdmin();
+}
+
+// ===== ADAUGA MICROBUZ =====
+function openModalAddMb(){
+  document.getElementById('mbNewNume').value='';document.getElementById('mbNewNr').value='';document.getElementById('mbNewSofer').value='';
+  document.querySelectorAll('#mbDestCheck input').forEach(cb=>cb.checked=false);
+  openModal('modalAddMb');
+}
+function saveMicrobuz(){
+  const cursaId=parseInt(document.getElementById('mbFilterCursa').value);
+  if(!cursaId){alert('Selectează mai întâi o cursă!');return;}
+  const cursaR=curse.find(c=>c.id===cursaId);
+  if(cursaR?.arhivata){alert('Cursa este arhivată!');return;}
+  const nume=document.getElementById('mbNewNume').value.trim();
+  const nr=document.getElementById('mbNewNr').value.trim();
+  const soferUsername=document.getElementById('mbNewSofer').value;
+  const destinatii=[...document.querySelectorAll('#mbDestCheck input:checked')].map(cb=>cb.value);
+  if(!nume){alert('Introdu numele microbuzului!');return;}
+  if(!destinatii.length){alert('Bifează cel puțin o destinație!');return;}
+  if(!soferUsername){alert('Atribuie un șofer!');return;}
+  microbuzuri.push({id:nextMbId++,cursaId,nume,nr,destinatii,soferUsername});
+  closeModal('modalAddMb');renderMicrobuzAdmin();renderCurse();
+}
+function deleteMb(mbId){if(!confirm('Ștergi microbuzul?'))return;microbuzuri=microbuzuri.filter(m=>m.id!==mbId);renderMicrobuzAdmin();renderCurse();}
+
+// ===== MICROBUZ SOFER =====
+function renderMicrobuzSofer(){
+  const cont=document.getElementById('mbSoferContent');
+  // find microbuz for current active cursă
+  const ca=cursaActiva();
+  const mb=microbuzuri.find(m=>m.soferUsername===currentUser.username&&m.cursaId===ca?.id);
+  if(!mb||!ca){cont.innerHTML=`<div class="empty-state"><div class="empty-icon">🚐</div><strong>Nu ți-a fost atribuit niciun microbuz pentru cursa activă.</strong><br><br>Contactează adminul sau șeful de cursă.</div>`;return;}
+  const pax=rezervari.filter(r=>r.cursaId===mb.cursaId&&mb.destinatii.includes(r.dest));
+  const bagajeTotal=pax.filter(r=>r.bagaje).map(r=>r.bagaje).join(', ');
+  cont.innerHTML=`
+    <div class="mb-sofer-hero">
+      <div class="mb-sofer-hero-title">${mb.nume} ${mb.nr?'· '+mb.nr:''}</div>
+      <div class="mb-sofer-hero-sub">Cursa din ${ca.data} la ${ca.ora}</div>
+      <div class="mb-sofer-ruta">📍 Destinații: <strong>${mb.destinatii.join(' · ')}</strong></div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-val">${pax.length}</div><div class="stat-lbl">Pasageri / ${MB_CAP} locuri</div></div>
+      <div class="stat-card"><div class="stat-val">${MB_CAP-pax.length}</div><div class="stat-lbl">Locuri disponibile</div></div>
+      <div class="stat-card"><div class="stat-val">${pax.filter(r=>r.bagaje).length}</div><div class="stat-lbl">Cu bagaje</div></div>
+    </div>
+    ${bagajeTotal?`<div class="alert alert-blue">🧳 Total bagaje: ${bagajeTotal}</div>`:''}
+    ${mb.destinatii.map(dest=>{
+      const pd=pax.filter(r=>r.dest===dest);if(!pd.length)return'';
+      return`<div class="card">
+        <div class="card-title" style="display:flex;align-items:center;justify-content:space-between;"><span>📍 ${dest}</span><span class="badge badge-orange">${pd.length} pasageri</span></div>
+        <div class="pax-list">${pd.map((r,i)=>`<div class="pax-row">
+          <div class="pax-num">${i+1}</div>
+          <div style="flex:1;">
+            <div style="font-size:14px;font-weight:500;">${r.nume}</div>
+            <div style="font-size:12px;color:var(--muted);">📞 ${r.tel}${r.bagaje?' · 🧳 '+r.bagaje:''} · Loc autocar: <strong>${r.loc}</strong></div>
+            ${r.nota?`<div style="font-size:11px;color:var(--purple);margin-top:2px;">📝 ${r.nota}</div>`:''}
+          </div>
+          <span class="badge ${plataBadge(r.plata)}" style="margin-right:6px;">${plataLabel(r.plata)}</span>
+          <select onchange="changeStatus(${r.id},this.value)" style="font-size:12px;padding:4px 8px;margin:0;width:auto;">
+            <option value="rezervat" ${r.status==='rezervat'?'selected':''}>Rezervat</option>
+            <option value="urcat" ${r.status==='urcat'?'selected':''}>Urcat</option>
+            <option value="absent" ${r.status==='absent'?'selected':''}>Absent</option>
+          </select>
+        </div>`).join('')}</div>
+      </div>`;
+    }).join('')}
+    ${!pax.length?'<div class="alert alert-blue">Niciun pasager atribuit pentru destinațiile tale.</div>':''}`;
+}
+
+// ===== BAZA DATE =====
+function renderBaza(){
+  const search=(document.getElementById('searchBaza').value||'').toLowerCase();
+  const pm={};
+  rezervari.forEach(r=>{
+    if(!pm[r.tel])pm[r.tel]={nume:r.nume,tel:r.tel,dest:{},curse:0,ultima:''};
+    const p=pm[r.tel];p.curse++;p.dest[r.dest]=(p.dest[r.dest]||0)+1;
+    const c=curse.find(x=>x.id===r.cursaId);if(c&&(!p.ultima||c.data>p.ultima))p.ultima=c.data;
+  });
+  let rows=Object.values(pm);
+  if(search)rows=rows.filter(p=>p.nume.toLowerCase().includes(search)||p.tel.includes(search));
+  const body=document.getElementById('bazaBody'),empty=document.getElementById('emptyBaza');
+  if(!rows.length){body.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+  body.innerHTML=rows.map(p=>{
+    const df=Object.entries(p.dest).sort((a,b)=>b[1]-a[1])[0];
+    return`<tr><td><strong>${p.nume}</strong></td><td><a href="tel:${p.tel}" style="color:var(--blue);text-decoration:none;">${p.tel}</a></td><td>${df?df[0]:'—'}</td><td><span class="badge badge-orange">${p.curse}</span></td><td style="color:var(--muted);">${p.ultima||'—'}</td>
+    <td><button class="btn btn-primary btn-sm" onclick="rezervareRapida('${p.nume.replace(/'/g,"\\'")}','${p.tel}')">+ Rezervare</button></td></tr>`;
+  }).join('');
+}
+function rezervareRapida(nume,tel){openModalRezervare(undefined);setTimeout(()=>{document.getElementById('rNume').value=nume;document.getElementById('rTel').value=tel;},100);}
+
+// ===== RAPOARTE =====
+function renderRapoarte(){
+  const total=rezervari.length,venit=rezervari.reduce((s,r)=>s+(r.pret||0),0);
+  const incasat=rezervari.filter(r=>r.plata==='platit').reduce((s,r)=>s+(r.pret||0),0);
+  const unici=new Set(rezervari.map(r=>r.tel)).size;
+  document.getElementById('rapoarteStats').innerHTML=`
+    <div class="stat-card"><div class="stat-val">${curse.length}</div><div class="stat-lbl">Curse totale</div></div>
+    <div class="stat-card"><div class="stat-val">${curse.filter(c=>c.arhivata).length}</div><div class="stat-lbl">Arhivate</div></div>
+    <div class="stat-card"><div class="stat-val">${total}</div><div class="stat-lbl">Rezervări totale</div></div>
+    <div class="stat-card"><div class="stat-val">${unici}</div><div class="stat-lbl">Pasageri unici</div></div>
+    <div class="stat-card"><div class="stat-val" style="color:var(--green);">${incasat} €</div><div class="stat-lbl">Încasat total</div></div>
+    <div class="stat-card"><div class="stat-val">${venit} €</div><div class="stat-lbl">Valoare totală</div></div>`;
+  const dc={};rezervari.forEach(r=>{dc[r.dest]=(dc[r.dest]||0)+1;});
+  const ds=Object.entries(dc).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('rapoarteDetalii').innerHTML=`
+    <div class="card-title">Destinații populare</div>
+    <div class="pax-list">${ds.map(([dest,cnt],i)=>`<div class="pax-row">
+      <div class="pax-num">${i+1}</div><div style="flex:1;font-size:14px;font-weight:500;">${dest}</div>
+      <div style="display:flex;align-items:center;gap:8px;"><div style="width:80px;height:6px;background:var(--border);border-radius:3px;overflow:hidden;"><div style="width:${Math.round(cnt/total*100)}%;height:100%;background:var(--orange);border-radius:3px;"></div></div><span class="badge badge-orange">${cnt}</span></div>
+    </div>`).join('')}</div>
+    <div class="divider"></div>
+    <div class="card-title">Situație per cursă</div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Data</th><th>Ora</th><th>Status</th><th>Pasageri</th><th>Microbuzuri</th><th>Încasat</th><th>Total</th></tr></thead>
+      <tbody>${curse.map(c=>{
+        const p=rezervari.filter(r=>r.cursaId===c.id);
+        const inc=p.filter(r=>r.plata==='platit').reduce((s,r)=>s+(r.pret||0),0);
+        const tot=p.reduce((s,r)=>s+(r.pret||0),0);
+        const mb=microbuzuri.filter(m=>m.cursaId===c.id).length;
+        return`<tr><td>${c.data}</td><td>${c.ora}</td>
+        <td><span class="cursa-tag ${c.arhivata?'cursa-arhivata':'cursa-activa'}" style="font-size:11px;padding:2px 8px;">${c.arhivata?'🔒 Arhivată':'✓ Activă'}</span></td>
+        <td><span class="badge badge-orange">${p.length} / ${c.locuri}</span></td><td>${mb}</td>
+        <td style="color:var(--green);font-weight:500;">${inc} €</td><td>${tot} €</td></tr>`;
+      }).join('')}</tbody>
+    </table></div>`;
+}
+
+// ===== MODAL =====
+function openModal(id){document.getElementById(id).classList.add('open');}
+function closeModal(id){document.getElementById(id).classList.remove('open');}
+document.querySelectorAll('.modal-overlay').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');});});
+document.getElementById('loginPass').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+</script>
+</body>
+</html>
